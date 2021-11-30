@@ -3,6 +3,9 @@
 Pull the code down into ~/.config/nvim (init.vim should be in this directory). Then run:
 
 	sudo bash install.sh
+	
+## Install all plugins
+	:PlugInstall
 
 ## First Load
 
