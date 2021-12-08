@@ -1,6 +1,8 @@
 # Installation
 ## Install nvim
-	https://github.com/neovim/neovim/wiki/Installing-Neovim, install with AppImage
+Install with AppImage from https://github.com/neovim/neovim/wiki/Installing-Neovim
+
+Symlink the nvim command
 	sudo ln -s ~/nvim.appimage /usr/bin/nvim
 	
 Pull the code down into ~/.config/nvim (init.vim should be in this directory). Then run:
@@ -60,3 +62,9 @@ You can more between the main panel, the file explorer and any other panels usin
 Select multiple lines then comment/uncomment them by:
 
 	\c<space>
+	
+# Recommended: Install Neovide
+Go to https://github.com/neovide/neovide#from-source-1 and install neovide from source under Linux section
+add this command to ~/.bashrc 
+	alias neovide="~/neovide/target/release/neovide"
+
