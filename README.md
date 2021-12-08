@@ -65,6 +65,6 @@ Select multiple lines then comment/uncomment them by:
 	
 # Recommended: Install Neovide
 Go to https://github.com/neovide/neovide#from-source-1 and install neovide from source under Linux section
-add this command to ~/.bashrc 
+add this command to .bashrc 
 	alias neovide="~/neovide/target/release/neovide"
 
