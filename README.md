@@ -1,5 +1,7 @@
 # Installation
-
+## Install nvim
+	https://github.com/neovim/neovim/wiki/Installing-Neovim
+	
 Pull the code down into ~/.config/nvim (init.vim should be in this directory). Then run:
 
 	sudo bash install.sh
