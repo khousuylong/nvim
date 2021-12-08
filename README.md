@@ -1,6 +1,6 @@
 # Installation
 ## Install nvim
-	https://github.com/neovim/neovim/wiki/Installing-Neovim
+	https://github.com/neovim/neovim/wiki/Installing-Neovim, install with AppImage
 	sudo ln -s ~/nvim.appimage /usr/bin/nvim
 	
 Pull the code down into ~/.config/nvim (init.vim should be in this directory). Then run:
