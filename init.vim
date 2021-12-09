@@ -34,6 +34,10 @@ call plug#begin("~/.vim/plugged")
 	Plug 'tpope/vim-surround' " Wrap selected text with tags, brackets or quotes
 	Plug 'maxmellon/vim-jsx-pretty' " Syntax and indenting for react
 	Plug 'lewis6991/gitsigns.nvim' " Information about git changes in guttet
+	Plug 'heavenshell/vim-jsdoc', {
+		\ 'for': ['javascript', 'javascript.jsx','typescript'],
+		\ 'do': 'make install'
+	\}
 call plug#end()
 
 " CONFIG SECTION
@@ -45,6 +49,11 @@ colorscheme dracula
 nnoremap <leader>c :Telescope colorscheme<Enter>
 
 "
+" Neovide
+"
+:autocmd BufWinEnter * setlocal modifiable
+
+"
 " Colour, Fonts and Layout
 "
 set guifont=operatormononerdfont\ nerd\ font\ light\ 18
@@ -53,6 +62,10 @@ set termguicolors		  						" Use true colors
 set encoding=utf-8                " Use UTF-8 everywhere.
 syntax enable
 highlight Comment cterm=italic gui=italic
+" enable setting title
+set title
+" configure title to look like: Vim /path/to/file
+set titlestring=VIM:\ %-25.55F\ %a%r%m titlelen=70
 
 "
 " Editing
@@ -97,9 +110,9 @@ filetype plugin on								" Allow filetype specific settings to override default
 "
 " Telescope settings
 "
-nnoremap <leader>f <cmd>Telescope find_files<cr>
+nnoremap <leader>f <cmd>Telescope find_files <cr>
 nnoremap <leader>r <cmd>Telescope live_grep<cr>
-nnoremap <leader>b <cmd>Telescope buffers<cr>
+nnoremap <leader>b <cmd>Telescope oldfiles cwd_only=true<cr>
 
 "
 " Panel navigation - move between panels with ALT + homerow
